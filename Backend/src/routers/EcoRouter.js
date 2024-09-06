@@ -1,9 +1,14 @@
 import { Router } from "express";
 
-import { CriarPost } from "../controllers/EcoControllers.js";
+import { CriarPost, Delete, getAll, getPost, image, updatePost } from "../controllers/EcoControllers.js";
 
 const router = Router();
 
-router.post("/postagens", CriarPost)
+router.post("/", CriarPost);
+router.get("/", getAll);
+router.get("/:id", getPost);
+router.put("/:id", updatePost);
+router.delete('/:id', Delete);
+router.post("/:id/imagem", image);
 
 export default router
