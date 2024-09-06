@@ -26,5 +26,6 @@ app.use("/postagens", EcoRouter);
 
 
 app.use((request, response) => {
+                                                                         
     response.status(404).json({ messaSge: "Rota não encontrada" });
 });
